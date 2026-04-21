@@ -42,5 +42,7 @@ public class Lt1 {
 
         double totalPayment = totalPrice - discount + VAT;
         System.out.println("Tổng tiền thanh toán: " + totalPayment + " VNĐ");
+
+        sc.close()
     }
 }
