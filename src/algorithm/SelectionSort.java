@@ -4,7 +4,7 @@ package algorithm;
 //Tốt nhất, trung bình, và xấu nhất: O(n²)
 public class SelectionSort {
 
-    public static void selectionSort(int[] a) {
+    public static void selectionSort (int[] a) {
 
         for (int i = 0; i < a.length; i++) {
 
