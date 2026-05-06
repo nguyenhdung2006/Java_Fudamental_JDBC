@@ -1,21 +1,28 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Gioi1 {
 
-    public static void main() {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Nhập password: ");
-        String password = sc.nextLine();
+        int n = sc.nextInt();
 
-        boolean isValid = password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^a-zA-Z0-9]).{8,}$");
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "abcdefghijklmnopqrstuvwxyz"
+                + "0123456789";
 
-        if (isValid) {
-            System.out.println("Valid password.");
-        } else {
-            System.out.println("Invalid password.");
+        Random random = new Random();
+
+        StringBuilder result = new StringBuilder(n);
+
+        for (int i = 0; i < n; i++) {
+            int index = random.nextInt(chars.length());
+            result.append(chars.charAt(index));
         }
+
+        System.out.println(result.toString());
 
         sc.close();
     }
